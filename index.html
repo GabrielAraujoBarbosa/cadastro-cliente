@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="h-full bg-white">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscrever-se Agora!</title>
+  <!-- Importação do Tailwind via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="h-full">
+  <div class="flex items-center justify-center min-h-screen bg-gray-100 p-6">
+    <div class="w-full max-w-md bg-white rounded-lg shadow-md p-8">
+      <h1 class="text-2xl font-bold text-gray-800 mb-6 text-center">Criar sua conta</h1>
+
+      <form action="processa.php" method="POST" class="space-y-5">
+        <div>
+          <label for="name" class="flex justify-between items-center w-full text-sm font-medium text-gray-700 mb-1">
+              <span>Nome Completo</span>
+              <span class="text-xs text-red-400 italic font-normal">Obrigatório</span>
+            </label>
+          <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-colors" maxlength="45" placeholder="Seu nome" required>
+        </div>
+
+        <div>
+          <label for="email" class="flex justify-between items-center w-full text-sm font-medium text-gray-700 mb-1">
+              <span>Email</span>
+              <span class="text-xs text-red-400 italic font-normal">Obrigatório</span>
+            </label>
+          <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-colors" placeholder="seu@email.com" maxlength="46" required>
+        </div>
+
+        <div>
+          <label for="age" class="flex justify-between items-center w-full text-sm font-medium text-gray-700 mb-1">
+              <span>Idade</span>
+              <span class="text-xs text-red-400 italic font-normal">Obrigatório</span>
+            </label>
+          <input type="number" id="age" name="age" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-colors" placeholder="Sua idade" min="15" max="100" step="1" required>
+        </div>
+
+        <div>
+          <label for="city" class="flex justify-between items-center w-full text-sm font-medium text-gray-700 mb-1">
+              <span>Cidade</span>
+              <span class="text-xs text-red-400 italic font-normal">Obrigatório</span>
+            </label>
+          <input type="text" id="city" name="city" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-colors" placeholder="Sua cidade" maxlength="30" required>
+        </div>
+
+        <div>
+          <label for="observations" class="flex justify-between items-center w-full text-sm font-medium text-gray-700 mb-1">
+              <span>Observações</span>
+              <span class="text-xs text-gray-400 italic font-normal">(Opcional)</span>
+            </label>
+          <textarea id="observations" name="observations" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-colors resize-none" placeholder="Algo a acrescentar?"></textarea>
+        </div>
+
+        <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2.5 px-4 rounded-md transition-colors shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+            Enviar
+          </button>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
