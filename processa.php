@@ -13,8 +13,8 @@
     $user_email = test_empty_input($_POST[$email], $email);
     $user_age = test_number_input( test_empty_input($_POST[$age], $age), $age );
     $user_city = test_empty_input($_POST[$city], $city);
-    
-    $user_observations = empty($_POST[$observations]) ? "Nenhuma Observação" : $_POST[$observations];
+
+    $user_observations = empty($_POST[$observations]) ? "(Nenhuma Observação)" : $_POST[$observations];
 
     function test_empty_input($dado_input, $nome_campo) {
         $dado_input = trim($dado_input);
